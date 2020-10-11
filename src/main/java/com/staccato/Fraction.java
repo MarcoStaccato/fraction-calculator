@@ -7,7 +7,9 @@ public class Fraction {
     private int denominator;
 
     public Fraction(int numerator, int denominator) {
-        if(numerator / denominator == 1) {
+        double numeratorDouble =  numerator;
+        double denominatorDouble =  denominator;
+        if(numeratorDouble / denominatorDouble == 1.0) {
             numerator = 1;
             denominator = 1;
         }
