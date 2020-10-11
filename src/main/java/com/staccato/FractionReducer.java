@@ -36,4 +36,20 @@ public class FractionReducer {
         dividerSet.add(number);
         return dividerSet;
     }
+
+    public static String reduceToMixed(Fraction fraction) {
+        //whole number
+        if(fraction.getNumerator() % fraction.getDenominator() == 0) {
+            return fraction.toString();
+        }
+        //fraction
+        if(fraction.getNumerator() < fraction.getDenominator()) {
+            return reduce(fraction).toString();
+        }
+        //mixed
+        int whole = fraction.getNumerator() / fraction.getDenominator();
+        Fraction wholeFraction = new Fraction(whole, 1);
+        Fraction partFraction = Operations.substraction(fraction, wholeFraction);
+        return wholeFraction.toString() + "_" + partFraction.toString();
+    }
 }
