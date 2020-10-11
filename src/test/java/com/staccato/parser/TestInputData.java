@@ -1,4 +1,6 @@
-package com.staccato;
+package com.staccato.parser;
+
+import com.staccato.Fraction;
 
 public interface TestInputData {
 

@@ -31,7 +31,7 @@ public class Operations {
         int numerator = left.getNumerator() * right.getDenominator();
         int denominator = right.getNumerator() * left.getDenominator();
         if(denominator == 0){
-            throw new ArithmeticException("Division by zero attempted");
+            throw new ArithmeticException(Messages.DIVISION_BY_ZERO_ATTEMPTED);
         }
         if(numerator == 0) denominator = 1;
         return new Fraction(numerator, denominator);

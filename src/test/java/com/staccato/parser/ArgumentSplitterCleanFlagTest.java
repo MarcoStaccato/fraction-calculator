@@ -1,11 +1,14 @@
-package com.staccato;
+package com.staccato.parser;
 
+import com.staccato.App;
+import com.staccato.OperatorEnum;
+import com.staccato.Parser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.staccato.TestInputData.ZERO_LEAD_NEGATIVE_INPUT;
-import static com.staccato.TestInputData.ZERO_MID_NEGATIVE_INPUT;
+import static com.staccato.parser.TestInputData.ZERO_LEAD_NEGATIVE_INPUT;
+import static com.staccato.parser.TestInputData.ZERO_MID_NEGATIVE_INPUT;
 
 public class ArgumentSplitterCleanFlagTest {
 

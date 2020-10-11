@@ -5,7 +5,6 @@ import com.staccato.Operations;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.staccato.TestInputData.*;
 import static com.staccato.operations.TestOperationsData.*;
 import static com.staccato.operations.TestOperationsData.FRACTION_1_2;
 

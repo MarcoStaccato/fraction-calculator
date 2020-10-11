@@ -1,9 +1,11 @@
-package com.staccato;
+package com.staccato.reducer;
 
+import com.staccato.Fraction;
+import com.staccato.FractionReducer;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.staccato.TestInputData.*;
+import static com.staccato.parser.TestInputData.*;
 
 public class FractionReducerTest {
 
