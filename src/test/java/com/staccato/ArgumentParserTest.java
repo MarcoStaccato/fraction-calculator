@@ -54,7 +54,7 @@ public class ArgumentParserTest {
     @Test
     public void parse_mixed_number_input() {
         Fraction fraction = parser.parseArgument(MIXED_NUMBER_ARG_INPUT);
-        System.out.println(fraction);
+        Assert.assertEquals(MIXED_OUTPUT_FRACTION, fraction);
     }
 
 }

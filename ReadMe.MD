@@ -20,13 +20,13 @@ You can do sum, substraction and division of fractions!
 
 ### Executing program
 
-* run `java -jar /target/calculator.jar`
+* run `java -jar target/calculator.jar`
 
 ### Unit Testing 
 
 * run `mvn test`
 
-## Authors
+## Author
 
 Contributors names and contact info
 
