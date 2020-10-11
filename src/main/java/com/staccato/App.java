@@ -25,18 +25,23 @@ public class App {
         System.out.println("Type your operation an then type enter 🦾 ");
 
         while(true) {
-            print("");
-            Scanner in = new Scanner(System.in);
-            input = in.nextLine();
-            if(isQuitCommand(input)) {
-                print("Thanks for using this calculator! 👾");
-                System.exit(0);
+            try{
+                print("");
+                Scanner in = new Scanner(System.in);
+                input = in.nextLine();
+                if(isQuitCommand(input)) {
+                    print("Thanks for using this calculator! 👾");
+                    System.exit(0);
+                }
+                Calculator calculator = new Calculator(input);
+                print("Your input is: [" + input + "]" + "\n");
+                Fraction result = calculator.calculate();
+                print("Result: " + result  + "\n");
+                print("Mixed Result: " + FractionReducer.reduceToMixed(result)  + "\n");
+            }catch (Exception e) {
+                print(e.getMessage() + "\n");
+                print("please refer back to the instructions\n");
             }
-            Calculator calculator = new Calculator(input);
-            print("Your input is: [" + input + "]" + "\n");
-            Fraction result = calculator.calculate();
-            print("Result: " + result  + "\n");
-            print("Mixed Result: " + FractionReducer.reduceToMixed(result)  + "\n");
         }
     }
 
