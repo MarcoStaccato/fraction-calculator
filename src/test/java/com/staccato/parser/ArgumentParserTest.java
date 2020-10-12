@@ -59,4 +59,9 @@ public class ArgumentParserTest {
         Assert.assertEquals(MIXED_OUTPUT_FRACTION, fraction);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void parse_multiple_underscore_input() {
+        parser.parseArgument(MULTIPLE_UDERSCORES_INPUT);
+    }
+
 }

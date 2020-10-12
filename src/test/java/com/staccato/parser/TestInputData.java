@@ -27,6 +27,7 @@ public interface TestInputData {
     String NEGATIVE_DENOMINATOR_ARG_INPUT = "34/-19";
     String ZERO_DENOMINATOR_ARG_INPUT = "4/0";
     String MIXED_NUMBER_ARG_INPUT = "2_3/8";
+    String MULTIPLE_UDERSCORES_INPUT = "2_3_/8_";
 
     Fraction INTEGER_FRACTION = new Fraction(1, 1);
     Fraction NEGATIVE_FRACTION = new Fraction(-1 ,1);

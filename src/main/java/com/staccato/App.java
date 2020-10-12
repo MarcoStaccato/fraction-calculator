@@ -11,6 +11,9 @@ public class App {
 
     public final static Set<String> EXIT_COMMANDS = new HashSet<>(Arrays.asList("quit", "exit"));
 
+    public final static String VALID_CHARACTERS_REGEX = "[\\d\\+\\-\\*\\/\\_\\s]+";
+    public final static String VALID_CHARACTERS_DECIMAL_REGEX = "[\\d\\+\\-\\*\\/\\.]+";
+
     public static boolean cleanSpaces = false;
 
     public static void main( String[] args ) {
@@ -19,8 +22,9 @@ public class App {
                 cleanSpaces = true;
             }
         }
+        System.out.println(MenuMessages.HEADER);
         String input = ""; //empty input
-        System.out.println("Welcome! to quit type quit or exit");
+        System.out.println(MenuMessages.WELCOME);
 
         System.out.println("Type your operation an then type enter 🦾 ");
 
@@ -33,6 +37,9 @@ public class App {
                     print("Thanks for using this calculator! 👾");
                     System.exit(0);
                 }
+                if(!validInput(input)) {
+                    throw new IllegalArgumentException("Your input contains invalid characters");
+                }
                 Calculator calculator = new Calculator(input);
                 print("Your input is: [" + input + "]" + "\n");
                 Fraction result = calculator.calculate();
@@ -40,7 +47,7 @@ public class App {
                 print("Mixed Result: " + FractionReducer.reduceToMixed(result)  + "\n");
             }catch (Exception e) {
                 print(e.getMessage() + "\n");
-                print("please refer back to the instructions\n");
+                print("Please refer back to the instructions\n");
             }
         }
     }
@@ -52,6 +59,10 @@ public class App {
 
     private static void print(String s) {
         System.out.print("> " + s);
+    }
+
+    private static boolean validInput(String input) {
+        return input.matches(VALID_CHARACTERS_REGEX);
     }
 
 }
