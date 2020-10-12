@@ -26,6 +26,14 @@ public class App {
         String input = ""; //empty input
         System.out.println(MenuMessages.WELCOME);
 
+        System.out.println("Valid characters are the following: digits [0-9], operators [+,-,*,/] and underscores");
+        System.out.println("Fractions should be written as the following: 1/2, -1/2, 1/-2, -2/-3 and 1_2/3 (mixed fraction)");
+        System.out.println("Operations should be written as the following: ");
+        System.out.println("1/2 + 3/4");
+        System.out.println("0 - 3/4");
+        System.out.println("1 * 3/4");
+        System.out.println("1/2 / 1_3/4");
+
         System.out.println("Type your operation an then type enter 🦾 ");
 
         while(true) {
